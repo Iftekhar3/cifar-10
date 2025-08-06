@@ -2,10 +2,8 @@
 import warnings
 import os
 import logging
-import absl.logging
 warnings.filterwarnings('ignore')
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-absl.logging.set_verbosity(absl.logging.ERROR)
 logging.getLogger('tensorflow').setLevel(logging.ERROR)
 
 import streamlit as st
