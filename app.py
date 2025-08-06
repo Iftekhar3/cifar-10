@@ -1,42 +1,12 @@
-# import streamlit as st
-# import numpy as np
-# import tensorflow as tf
-# from PIL import Image
-
-# # Load model
-# model = tf.keras.models.load_model("my_model.keras")
-
-# # CIFAR-10 class labels
-# class_names = ['airplane', 'automobile', 'bird', 'cat', 'deer',
-#                'dog', 'frog', 'horse', 'ship', 'truck']
-
-# st.title("CIFAR-10 Image Classifier")
-# st.write("Upload an image and let the model predict what it is.")
-
-# # Upload image
-# uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
-
-# if uploaded_file is not None:
-#     # Display image
-#     image = Image.open(uploaded_file).convert("RGB")
-#     st.image(image, caption="Uploaded Image", use_column_width=True)
-
-#     # Preprocess image
-#     image = image.resize((32, 32))
-#     image_array = np.array(image).astype("float32") / 255.0
-#     image_array = np.expand_dims(image_array, axis=0)  # shape: (1, 32, 32, 3)
-
-#     # Make prediction
-#     predictions = model.predict(image_array)
-#     predicted_class = class_names[np.argmax(predictions)]
-
-#     st.markdown("### Prediction:")
-#     st.write(f"**{predicted_class}**")
-
-#     st.markdown("### Probabilities:")
-#     for i, prob in enumerate(predictions[0]):
-#         st.write(f"{class_names[i]}: {prob:.4f}")
-
+# To Supress Warnings for streamlit
+import warnings
+import os
+import logging
+import absl.logging
+warnings.filterwarnings('ignore')
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+absl.logging.set_verbosity(absl.logging.ERROR)
+logging.getLogger('tensorflow').setLevel(logging.ERROR)
 
 import streamlit as st
 import numpy as np
@@ -44,7 +14,6 @@ import tensorflow as tf
 from PIL import Image
 import requests
 from io import BytesIO
-
 # Load model
 model = tf.keras.models.load_model("my_model.keras")
 
