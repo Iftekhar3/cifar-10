@@ -3,6 +3,8 @@
 An end-to-end deep learning project for classifying images into 10 categories from the CIFAR-10 dataset.  
 The project covers the full ML lifecycle — from data preprocessing and model training to deployment as an interactive Streamlit web application.
 
+### Live web app - https://iftekhar-cifar-10.streamlit.app/
+
 ## 🚀 Project Overview
 This project demonstrates how to:
 - Build and train a custom **Convolutional Neural Network (CNN)** for image classification.
