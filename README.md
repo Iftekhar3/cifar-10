@@ -60,7 +60,7 @@ This project demonstrates how to:
 - **Loss Function:** Categorical Crossentropy
 - **Optimizer:** Adam (lr = 0.001)
 
----
+--
 
 ## 🖥 Streamlit Web App
 The Streamlit app allows users to:
@@ -69,4 +69,4 @@ The Streamlit app allows users to:
 3. Test model performance interactively.
 
 **Run the app locally:**
-``streamlit run app.py
+```streamlit run app.py
