@@ -69,4 +69,4 @@ The Streamlit app allows users to:
 3. Test model performance interactively.
 
 **Run the app locally:**
-```bash streamlit run app.py
+streamlit run app.py
